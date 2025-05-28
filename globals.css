@@ -1,0 +1,72 @@
+:root {
+  /* Dark-mode palette */
+  --bg-color:   #121212;
+  --text-color: #E0E0E0;
+  --accent:     #BB86FC;
+  --accent-hover: #9A6EFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: var(--accent);
+}
+
+.tagline {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.intro p {
+  line-height: 1.6;
+  margin: 2rem 0;
+}
+
+.contact button {
+  background-color: var(--accent);
+  border: none;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: var(--accent-hover);
+}
+
+.contact p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
