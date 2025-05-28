@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SSWHO - Business Acquisitions</title>
+  <link rel="stylesheet" href="globals.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SSWHO</h1>
+      <p class="tagline">Acquiring Businesses. Building Legacies.</p>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p>
+          Welcome to <strong>SSWHO</strong>, where I seek out, evaluate, and acquire
+          promising businesses to take them to their next growth phase. With deep
+          expertise in fintech partnerships and a track record of driving value,
+          I’m committed to excellence in every transaction.
+        </p>
+      </section>
+
+      <section class="contact">
+        <button id="contact-btn">Contact Me</button>
+        <p>Email: <a href="mailto:sanjay@sswho.com">sanjay@sswho.com</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 SSWHO. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script type="module">
+    // TypeScript-style module script (requires build/transpile step)
+    const contactButton = document.getElementById('contact-btn') as HTMLButtonElement;
+    contactButton.addEventListener('click', (): void => {
+      window.location.href = 'mailto:sanjay@sswho.com';
+    });
+  </script>
+</body>
+</html>
