@@ -2,283 +2,260 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-
-  <title>SSWHO | Orlando Acquisition Entrepreneur</title>
-  <meta name="description"
-        content="Operator with committed capital seeking one Orlando-area B2B service or light-manufacturing company (SDE $750k-$2M) to acquire, operate and grow.">
-
-  <!-- Fonts -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSWHO | Acquire & Scale</title>
+  <meta name="description" content="SSWHO acquires profitable B2B businesses and unlocks growth through workflow automation and channel-driven sales.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles (unchanged utility variables + minor colour tweaks) -->
   <style>
+    /* ---------- root palette & resets ---------- */
     :root{
-      --primary:#0066cc; --primary-dark:#0052a3; --primary-light:#e6f3ff;
-      --background:#ffffff; --surface:#f8fafc;
-      --text-primary:#1e293b; --text-secondary:#475569; --text-muted:#94a3b8;
-      --border:#e2e8f0; --shadow:0 1px 3px rgb(0 0 0/.1),0 1px 2px -1px rgb(0 0 0/.1);
-      --shadow-lg:0 10px 15px -3px rgb(0 0 0/.1),0 4px 6px -4px rgb(0 0 0/.1);
+      --primary:#0066cc;--primary-dark:#0052a3;--primary-light:#e6f3ff;
+      --secondary:#1a1a1a;--background:#ffffff;--surface:#f8fafc;--surface-dark:#f1f5f9;
+      --text-primary:#1e293b;--text-secondary:#64748b;--text-muted:#94a3b8;
+      --border:#e2e8f0;
+      --shadow:0 1px 3px 0 rgb(0 0 0 / .1),0 1px 2px -1px rgb(0 0 0 / .1);
+      --shadow-lg:0 10px 15px -3px rgb(0 0 0 / .1),0 4px 6px -4px rgb(0 0 0 / .1);
       --gradient:linear-gradient(135deg,#0066cc 0%,#0052a3 100%);
     }
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{font-family:'Inter',sans-serif;line-height:1.6;color:var(--text-primary);background:var(--background);}
-    .container{max-width:1200px;margin:auto;padding:0 2rem}
-    header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.95);
-           border-bottom:1px solid var(--border);backdrop-filter:blur(10px)}
-    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;min-height:80px}
-    .logo{font-size:1.75rem;font-weight:700;color:var(--primary);text-decoration:none;letter-spacing:-.02em}
-    .nav-links{display:flex;gap:2rem;align-items:center}
-    .nav-links a{color:var(--text-secondary);font-weight:500;text-decoration:none;position:relative}
-    .nav-links a:hover{color:var(--primary)}
-    .cta-button{background:var(--gradient);color:#fff;padding:.75rem 1.4rem;border-radius:8px;font-weight:600;text-decoration:none}
-    .mobile-toggle{display:none;flex-direction:column;padding:.5rem;border:none;background:none;cursor:pointer}
-    .mobile-toggle span{width:24px;height:2px;background:var(--text-primary);margin:3px 0}
-    /* sections / cards / forms (same as previous) */
-    .hero{padding:140px 0 100px;text-align:center;background:var(--surface)}
-    .hero h1{font-size:3rem;font-weight:700;margin-bottom:1.2rem}
-    .hero-sub{font-size:1.25rem;color:var(--text-secondary);max-width:620px;margin:0 auto 2rem}
-    .hero-cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--gradient);color:#fff;padding:1rem 2rem;border-radius:12px;font-weight:600;text-decoration:none}
-    .section{padding:80px 0}
-    .section-header{text-align:center;margin-bottom:3rem}
-    .section-header h2{font-size:2.25rem;font-weight:700}
-    .about-text,.why-text{font-size:1.1rem;color:var(--text-secondary);max-width:820px;margin:0 auto;line-height:1.7}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem}
-    .card{background:#fff;padding:2rem;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow)}
-    .card-icon{width:50px;height:50px;background:var(--primary-light);display:flex;justify-content:center;align-items:center;border-radius:10px;margin-bottom:1rem;font-size:1.3rem;color:var(--primary)}
-    .card h3{font-size:1.25rem;margin-bottom:.8rem}
-    .card ul{list-style:none}
-    .card li{margin-bottom:.6rem;color:var(--text-secondary);display:flex;gap:.6rem}
-    .card li::before{content:'✓';color:var(--primary)}
-    form{display:flex;flex-direction:column;gap:1rem}
-    input,textarea{padding:.85rem 1rem;border:1px solid var(--border);border-radius:8px;font:inherit}
-    button[type=submit]{align-self:center}
-    footer{background:var(--text-primary);color:var(--text-muted);padding:3rem 0;text-align:center;margin-top:4rem}
-    /* Responsive tweaks */
-    @media(max-width:768px){.container{padding:0 1rem}.nav-links{display:none}.mobile-toggle{display:flex}.hero h1{font-size:2.3rem}}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+      line-height:1.6;color:var(--text-primary);background:var(--background);
+    }
+    .container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+
+    /* ---------- header & nav ---------- */
+    header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.95);
+      backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:1000;transition:.3s;}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;min-height:80px;}
+    .logo{font-size:1.75rem;font-weight:700;color:var(--primary);text-decoration:none;letter-spacing:-.025em;}
+    .nav-links{display:flex;gap:2.5rem;align-items:center;}
+    .nav-links a{color:var(--text-secondary);text-decoration:none;font-weight:500;font-size:.95rem;transition:.2s;position:relative;}
+    .nav-links a:hover{color:var(--primary);}
+    .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--primary);transition:.2s;}
+    .nav-links a:hover::after{width:100%;}
+    .cta-button{
+      background:var(--gradient);color:#fff;padding:.75rem 1.5rem;border-radius:8px;
+      text-decoration:none;font-weight:600;font-size:.9rem;transition:.2s;box-shadow:var(--shadow);
+    }
+    .cta-button:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg);}
+    .mobile-menu-toggle{display:none;flex-direction:column;cursor:pointer;padding:.5rem;}
+    .mobile-menu-toggle span{width:24px;height:2px;background:var(--text-primary);margin:3px 0;transition:.3s;}
+
+    /* ---------- hero ---------- */
+    .hero{padding:140px 0 100px;text-align:center;background:var(--surface);}
+    .hero-content h1{font-size:3.5rem;font-weight:700;color:var(--text-primary);margin-bottom:1.5rem;letter-spacing:-.02em;line-height:1.1;}
+    .hero-subtitle{font-size:1.375rem;color:var(--text-secondary);margin-bottom:2.5rem;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.5;}
+    .hero-cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--gradient);color:#fff;padding:1rem 2rem;border-radius:12px;text-decoration:none;font-weight:600;font-size:1.1rem;transition:.3s;box-shadow:var(--shadow-lg);}
+    .hero-cta:hover{transform:translateY(-2px);box-shadow:0 20px 25px -5px rgb(0 0 0 / .1),0 8px 10px -6px rgb(0 0 0 / .1);}
+
+    /* ---------- sections ---------- */
+    .section{padding:80px 0;}
+    .section-header{text-align:center;margin-bottom:4rem;}
+    .section h2{font-size:2.5rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-.02em;}
+    .section-description{font-size:1.25rem;color:var(--text-secondary);max-width:700px;margin:0 auto;line-height:1.6;}
+
+    /* ---------- about ---------- */
+    .about{background:var(--background);}
+    .about-content{max-width:800px;margin:0 auto;text-align:center;}
+    .about-text{font-size:1.2rem;color:var(--text-secondary);line-height:1.7;}
+
+    /* ---------- cards grid ---------- */
+    .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:3rem;}
+    .card{background:#fff;padding:2.5rem 2rem;border-radius:16px;box-shadow:var(--shadow);border:1px solid var(--border);transition:.3s;}
+    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+    .card-icon{width:60px;height:60px;background:var(--primary-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;font-size:1.5rem;color:var(--primary);}
+    .card h3{font-size:1.375rem;font-weight:600;color:var(--text-primary);margin-bottom:1rem;}
+    .card ul{list-style:none;}
+    .card li{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.75rem;color:var(--text-secondary);line-height:1.5;}
+    .card li::before{content:'✓';color:var(--primary);font-weight:600;flex-shrink:0;margin-top:.125rem;}
+
+    /* ---------- criteria/partners/contact/footers remain unchanged ---------- */
+    .criteria{background:var(--surface);}
+    .partners{background:var(--background);}
+    .contact{background:var(--surface);text-align:center;}
+    .contact-content{max-width:600px;margin:0 auto;}
+    .contact-text{font-size:1.25rem;color:var(--text-secondary);margin-bottom:2.5rem;line-height:1.6;}
+
+    footer{background:var(--text-primary);color:var(--text-muted);padding:3rem 0;text-align:center;}
+    .footer-content{border-top:1px solid #374151;padding-top:2rem;}
+
+    /* ---------- responsive tweaks (unchanged) ---------- */
+    @media(max-width:768px){
+      .container{padding:0 1rem;}
+      .nav-links{display:none;}
+      .mobile-menu-toggle{display:flex;}
+      .hero-content h1{font-size:2.5rem;}
+      .hero-subtitle{font-size:1.125rem;}
+      .section h2{font-size:2rem;}
+      .cards-grid{grid-template-columns:1fr;gap:1.5rem;}
+      .card{padding:2rem 1.5rem;}
+      .hero{padding:120px 0 80px;}
+      .section{padding:60px 0;}
+    }
+    @media(max-width:480px){
+      .hero-content h1{font-size:2rem;}
+      .hero-subtitle{font-size:1rem;}
+      .section h2{font-size:1.75rem;}
+    }
+
+    /* ---------- animations & scroll ---------- */
+    .fade-in{opacity:0;transform:translateY(30px);animation:fadeIn .8s ease forwards;}
+    @keyframes fadeIn{to{opacity:1;transform:translateY(0);} }
+    .scroll-indicator{position:fixed;top:80px;left:0;width:100%;height:3px;background:var(--border);z-index:999;}
+    .scroll-progress{height:100%;background:var(--gradient);width:0%;transition:width .1s;}
   </style>
-
-  <!-- Structured data: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"SSWHO",
-    "description":"Orlando-based acquisition entrepreneur seeking one B2B service or light-manufacturing business.",
-    "url":"https://sswho.com",
-    "areaServed":"US-FL",
-    "contactPoint":[{"@type":"ContactPoint","telephone":"+1-407-555-0198","contactType":"inquiries"}],
-    "sameAs":["https://www.linkedin.com/in/placeholder"]
-  }
-  </script>
-
-  <!-- GA4 (replace G-XXXXXXXXX) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXX"></script>
-  <script>
-    window.dataLayer=window.dataLayer||[];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js',new Date()); gtag('config','G-XXXXXXXXX');
-  </script>
 </head>
-
 <body>
+
+  <!-- scroll bar -->
+  <div class="scroll-indicator"><div class="scroll-progress"></div></div>
+
   <!-- Header -->
   <header>
     <nav class="container">
-      <a class="logo" href="#">SSWHO</a>
-      <div class="nav-links" id="nav">
+      <a href="#" class="logo">SSWHO</a>
+      <div class="nav-links">
         <a href="#about">About</a>
         <a href="#criteria">Criteria</a>
-        <a href="#process">Process</a>
-        <a href="#transition">Transition Promise</a>
-        <a href="#contact" class="cta-button">Share a Deal</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+        <a href="mailto:hello@sswho.com" class="cta-button">Get in Touch</a>
       </div>
-      <button class="mobile-toggle" id="nav-btn" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="mobile-menu-toggle"><span></span><span></span><span></span></div>
     </nav>
   </header>
 
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>One Orlando Business Wanted</h1>
-      <p class="hero-sub">
-        Committed capital to <em>buy, run &amp; grow</em> a single product-based
-        B2B service or light-manufacturing company. Powered by the
-        <strong>Buy&nbsp;Then&nbsp;Build</strong> approach.
-      </p>
-      <a href="#contact" class="hero-cta">Submit Opportunity →</a>
+      <div class="hero-content fade-in">
+        <h1>Acquire &amp; Scale</h1>
+        <p class="hero-subtitle">
+          Unlocking value in profitable B2B companies through workflow automation and channel-driven growth
+        </p>
+        <a href="mailto:hello@sswho.com" class="hero-cta">Start the Conversation&nbsp;→</a>
+      </div>
     </div>
   </section>
 
-  <!-- Founder Credibility -->
-  <section id="about" class="section">
+  <!-- About -->
+  <section id="about" class="section about">
     <div class="container">
-      <div class="section-header"><h2>Meet the Operator</h2></div>
-      <div class="cards">
-        <div class="card" style="text-align:center">
-          <!-- Optional headshot -->
-          <img src="headshot.jpg" alt="Founder headshot" style="width:110px;border-radius:50%;margin-bottom:1rem">
-          <p class="about-text">
-            Fifteen years driving channel revenue from $0 → $100 M+ and
-            integrating acquisitions at Fortune 500 scale. Recognised for 40 %
-            YoY compound growth and successful carve-out integration in 2022.
-          </p>
-          <p style="margin-top:1rem;font-size:.95rem;color:var(--text-secondary)">
-            <strong>Core strengths:</strong> revenue ops, process automation,
-            culture-first leadership.
-          </p>
-          <div style="margin-top:1.2rem">
-            <a href="#contact" class="cta-button" style="padding:.6rem 1.2rem;font-size:.85rem">
-              Start Confidential Chat
-            </a>
-            <a href="https://www.linkedin.com/in/placeholder" style="margin-left:1rem;font-size:.9rem">LinkedIn ↗</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Why Work With Me?</h3>
-          <ul>
-            <li>Sole focus on **one** acquisition—your company gets 100 % of my attention</li>
-            <li>Owner-operator model ensures long-term stewardship</li>
-            <li>Data-driven growth playbook (automation + channel partnerships)</li>
-            <li>Backed by local Orlando investors for fast, certain close</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>What Sellers Say</h3>
-          <blockquote style="font-style:italic;color:var(--text-secondary)">
-            “Smoothest transition we’ve ever seen—our people felt supported from
-            day one.” — Former owner, B2B distributor
-          </blockquote>
-          <blockquote style="font-style:italic;color:var(--text-secondary);margin-top:1rem">
-            “Hit every milestone exactly when promised.” — Sell-side broker
-          </blockquote>
-        </div>
+      <div class="section-header fade-in"><h2>About SSWHO</h2></div>
+      <div class="about-content fade-in">
+        <p class="about-text">
+          I’m a Central-Florida operator who scaled a B2B channel from zero to $13 MM ARR in three years by pairing process automation with partnership sales. I’m applying that playbook as the owner-operator of an established company—preserving its legacy while doubling cash flow through disciplined execution.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Criteria -->
-  <section id="criteria" class="section" style="background:var(--surface)">
+  <section id="criteria" class="section criteria">
     <div class="container">
-      <div class="section-header"><h2>Target Profile</h2></div>
-      <div class="cards">
-        <div class="card">
+      <div class="section-header fade-in">
+        <h2>Acquisition Criteria</h2>
+        <p class="section-description">
+          Seeking strong fundamentals today and clear levers for tomorrow
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Location & Industry -->
+        <div class="card fade-in">
           <div class="card-icon">📍</div>
-          <h3>Location & Sectors</h3>
+          <h3>Location &amp; Industry</h3>
           <ul>
-            <li>Greater Orlando (relocatable considered)</li>
-            <li>Sub-sectors: industrial packaging, specialty cleaning chemicals, HVAC service parts</li>
-            <li>5+ years operating history</li>
+            <li>Orlando area, remote-based, or relocatable operations</li>
+            <li>Product, <b>manufacturing</b>, or B2B service companies</li>
+            <li>5+ years of operating history</li>
+            <li>Defensible niche or technical know-how</li>
           </ul>
         </div>
-        <div class="card">
+        <!-- Financial Profile -->
+        <div class="card fade-in">
           <div class="card-icon">💰</div>
-          <h3>SDE & Financials</h3>
+          <h3>Financial Profile</h3>
           <ul>
-            <li>SDE $750 k – $2 M (cash-flow to owner) </li>
-            <li>Gross margin ≥ 30 %, net margin ≥ 20 %</li>
-            <li>Recurring/contract revenue &gt; 50 %</li>
-            <li>Customer concentration &lt; 20 %</li>
+            <li>SDE ≈ <b>$1 MM</b> annually</li>
+            <li>EBITDA margin ≥ 20 %  |  COGS &lt; 35 %</li>
+            <li>Repeat/contracted revenue ≥ 75 %</li>
+            <li>Single-customer concentration &lt; 20 %</li>
           </ul>
         </div>
-        <div class="card">
-          <div class="card-icon">🚀</div>
-          <h3>Growth Levers</h3>
+        <!-- Growth Potential -->
+        <div class="card fade-in">
+          <div class="card-icon">📈</div>
+          <h3>Growth Potential</h3>
           <ul>
-            <li>Process automation &amp; ERP upgrades</li>
-            <li>Channel-partner expansion</li>
-            <li>Lean ops to improve SDE 2-3× within 3 yrs</li>
+            <li>Manual processes ready for automation</li>
+            <li>Untapped partner or reseller channels</li>
+            <li>Pricing or upsell headroom</li>
+            <li>Room for bolt-on acquisitions</li>
           </ul>
         </div>
       </div>
-      <div style="text-align:center;margin-top:2.5rem">
-        <a class="cta-button" href="SSWHO_Criteria.pdf" download>
-          Download 1-Page Criteria Sheet
-        </a>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section id="partners" class="section partners">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Partner With SSWHO</h2>
+        <p class="section-description">
+          Aligning incentives for owners, brokers, lenders, and passive investors
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card fade-in">
+          <div class="card-icon">🤝</div>
+          <h3>Brokers</h3>
+          <ul>
+            <li>Clear criteria, fast feedback</li>
+            <li>Discreet, professional diligence</li>
+            <li>Rapid decisions, transparent comms</li>
+            <li>Long-term relationship mindset</li>
+          </ul>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">👨‍💼</div>
+          <h3>Owners</h3>
+          <ul>
+            <li>Hands-on successor committed to legacy</li>
+            <li>Employee welfare &amp; culture preserved</li>
+            <li>Smooth, respectful transition plan</li>
+            <li>Local presence in Central FL</li>
+          </ul>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">💼</div>
+          <h3>Investors &amp; Lenders</h3>
+          <ul>
+            <li>10 % equity tranche alongside 90 % SBA financing</li>
+            <li>Target ~17 % IRR via cash flow &amp; value creation</li>
+            <li>Quarterly KPI reporting</li>
+            <li>Personal guarantee = strong alignment</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Fast Process -->
-  <section id="process" class="section">
+  <!-- Contact -->
+  <section id="contact" class="section contact">
     <div class="container">
-      <div class="section-header"><h2>Fast-Track Process</h2></div>
-      <div class="cards">
-        <div class="card"><h3>Week 0</h3><p>NDA + 30-min intro call</p></div>
-        <div class="card"><h3>Day 5</h3><p>LOI delivered (after light SDE review)</p></div>
-        <div class="card"><h3>Day 45-60</h3><p>Close with committed capital</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Transition Promise -->
-  <section id="transition" class="section" style="background:var(--surface)">
-    <div class="container">
-      <div class="section-header"><h2>Transition Promise</h2></div>
-      <p class="why-text">
-        Employees keep their roles, customers keep their service, and the founder
-        sets the pace of transition. I work on-site with your team for the first
-        90 days, preserving culture while installing systems that support growth
-        and stability.
-      </p>
-    </div>
-  </section>
-
-  <!-- Social Proof Belt -->
-  <section class="section">
-    <div class="container" style="display:flex;justify-content:center;gap:3rem;flex-wrap:wrap">
-      <img src="ibba.png" alt="IBBA Member" style="height:45px">
-      <img src="bta.png"  alt="Business Transition Academy" style="height:45px">
-      <img src="florida-chamber.png" alt="Florida Chamber" style="height:45px">
-    </div>
-  </section>
-
-  <!-- Lead-capture + Broker form -->
-  <section id="contact" class="section" style="background:var(--surface)">
-    <div class="container">
-      <div class="section-header"><h2>Contact & Deal Flow</h2></div>
-
-      <div class="cards">
-        <!-- Newsletter -->
-        <div class="card">
-          <h3>Deal-Alert Newsletter</h3>
-          <p style="color:var(--text-secondary);margin-bottom:1rem">
-            Get a quarterly snapshot of the Florida lower-middle-market
-            (confidential, investors welcome).
-          </p>
-          <form action="https://formspree.io/f/yourNewsletterID" method="POST">
-            <input type="email" name="email" placeholder="Email address" required>
-            <button type="submit" class="cta-button" style="padding:.6rem 1.4rem;font-size:.9rem">
-              Subscribe
-            </button>
-          </form>
-        </div>
-
-        <!-- Broker upload -->
-        <div class="card">
-          <h3>Submit a Deal (Brokers)</h3>
-          <form action="https://formspree.io/f/yourBrokerID" method="POST" enctype="multipart/form-data">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="file" name="teaser" accept=".pdf,.doc,.ppt">
-            <textarea name="message" rows="4" placeholder="Key points / SDE / asking multiple"></textarea>
-            <button type="submit" class="cta-button" style="padding:.6rem 1.4rem;font-size:.9rem">
-              Send Confidentially
-            </button>
-          </form>
-          <p style="font-size:.85rem;color:var(--text-secondary);margin-top:.8rem">
-            Prefer direct email?  <a href="mailto:deals@sswho.com">deals@sswho.com</a><br>
-            Questions? Call 407-555-0198
-          </p>
-        </div>
+      <div class="contact-content fade-in">
+        <h2>Let’s Create Value Together</h2>
+        <p class="contact-text">
+          Brokers with listings, owners exploring succession, or investors seeking passive opportunity—let’s talk.
+        </p>
+        <a href="mailto:hello@sswho.com" class="hero-cta">Email Sanjay →</a>
       </div>
     </div>
   </section>
@@ -286,22 +263,33 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      © 2025 SSWHO – Confidential Orlando Search
+      <div class="footer-content">
+        <p>&copy; 2025 SSWHO | Acquire & Scale</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Small JS: nav toggle + scroll bar -->
+  <!-- Scripts -->
   <script>
-    // progress
-    const bar=document.createElement('div');
-    bar.style.cssText='position:fixed;top:80px;left:0;height:3px;background:#0066cc;width:0;z-index:999';
-    document.body.append(bar);
-    window.addEventListener('scroll',()=>bar.style.width=
-      (window.scrollY/(document.body.scrollHeight-window.innerHeight))*100+'%');
-
-    // mobile nav
-    const btn=document.getElementById('nav-btn'),nav=document.getElementById('nav');
-    btn.onclick=()=>{const e=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!e);nav.style.display=e?'none':'flex'};
+    /* smooth scroll nav */
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const tgt=document.querySelector(a.getAttribute('href'));
+        if(tgt){window.scrollTo({top:tgt.offsetTop-80,behavior:'smooth'});}
+      });
+    });
+    /* progress bar */
+    const bar=document.querySelector('.scroll-progress');
+    window.addEventListener('scroll',()=>{
+      const h=document.body.offsetHeight-window.innerHeight;
+      bar.style.width=(window.pageYOffset/h)*100+'%';
+    });
+    /* fade-in observer */
+    const obs=new IntersectionObserver(ents=>{
+      ents.forEach(ent=>{if(ent.isIntersecting){ent.target.classList.add('fade-in');}});
+    },{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+    document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
   </script>
 </body>
 </html>
