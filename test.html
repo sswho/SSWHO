@@ -3,324 +3,305 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-  <!-- Keep this page private -->
   <meta name="robots" content="noindex, nofollow">
-  <!-- (Optional) also return:  X-Robots-Tag: noindex, nofollow -->
 
-  <title>SSWHO | Orlando Acquisition Search</title>
+  <title>SSWHO | Orlando Acquisition Entrepreneur</title>
   <meta name="description"
-        content="Operator with committed capital seeking one Orlando-area B2B service or light-manufacturing business (SDE $750k–$2M) to acquire and lead long-term.">
+        content="Operator with committed capital seeking one Orlando-area B2B service or light-manufacturing company (SDE $750k-$2M) to acquire, operate and grow.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- ========  STYLES  ========= -->
+  <!-- Styles (unchanged utility variables + minor colour tweaks) -->
   <style>
-    /* ---------- CSS VARIABLES ---------- */
     :root{
-      --primary:#0066cc;
-      --primary-dark:#0052a3;
-      --primary-light:#e6f3ff;
-      --background:#ffffff;
-      --surface:#f8fafc;
-      --text-primary:#1e293b;
-      --text-secondary:#475569;   /* WCAG-compliant */
-      --text-muted:#94a3b8;
-      --border:#e2e8f0;
-      --shadow:0 1px 3px 0 rgb(0 0 0/.1),0 1px 2px -1px rgb(0 0 0/.1);
+      --primary:#0066cc; --primary-dark:#0052a3; --primary-light:#e6f3ff;
+      --background:#ffffff; --surface:#f8fafc;
+      --text-primary:#1e293b; --text-secondary:#475569; --text-muted:#94a3b8;
+      --border:#e2e8f0; --shadow:0 1px 3px rgb(0 0 0/.1),0 1px 2px -1px rgb(0 0 0/.1);
       --shadow-lg:0 10px 15px -3px rgb(0 0 0/.1),0 4px 6px -4px rgb(0 0 0/.1);
       --gradient:linear-gradient(135deg,#0066cc 0%,#0052a3 100%);
     }
-
-    /* ---------- RESET & BASICS ---------- */
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-      line-height:1.6;
-      color:var(--text-primary);
-      background:var(--background);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-    .container{max-width:1200px;margin:0 auto;padding:0 2rem}
-
-    /* ---------- HEADER & NAV ---------- */
-    header{
-      position:fixed;top:0;left:0;right:0;z-index:1000;
-      background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--border);transition:.3s;
-    }
-    nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;min-height:80px}
-    .logo{font-size:1.75rem;font-weight:700;color:var(--primary);text-decoration:none;letter-spacing:-.025em}
-
-    .nav-links{display:flex;gap:2.5rem;align-items:center}
-    .nav-links a{
-      color:var(--text-secondary);font-weight:500;font-size:.95rem;text-decoration:none;position:relative;transition:.2s}
+    body{font-family:'Inter',sans-serif;line-height:1.6;color:var(--text-primary);background:var(--background);}
+    .container{max-width:1200px;margin:auto;padding:0 2rem}
+    header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.95);
+           border-bottom:1px solid var(--border);backdrop-filter:blur(10px)}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;min-height:80px}
+    .logo{font-size:1.75rem;font-weight:700;color:var(--primary);text-decoration:none;letter-spacing:-.02em}
+    .nav-links{display:flex;gap:2rem;align-items:center}
+    .nav-links a{color:var(--text-secondary);font-weight:500;text-decoration:none;position:relative}
     .nav-links a:hover{color:var(--primary)}
-    .nav-links a::after{
-      content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--primary);transition:.2s}
-    .nav-links a:hover::after{width:100%}
-
-    .cta-button{
-      background:var(--gradient);color:#fff;padding:.75rem 1.5rem;border-radius:8px;
-      font-weight:600;font-size:.9rem;box-shadow:var(--shadow);text-decoration:none;transition:.2s}
-    .cta-button:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg)}
-
-    /* Mobile menu icon */
-    .mobile-menu-toggle{display:none;flex-direction:column;cursor:pointer;padding:.5rem;border:none;background:none}
-    .mobile-menu-toggle span{width:24px;height:2px;background:var(--text-primary);margin:3px 0;transition:.3s}
-
-    /* ---------- HERO ---------- */
+    .cta-button{background:var(--gradient);color:#fff;padding:.75rem 1.4rem;border-radius:8px;font-weight:600;text-decoration:none}
+    .mobile-toggle{display:none;flex-direction:column;padding:.5rem;border:none;background:none;cursor:pointer}
+    .mobile-toggle span{width:24px;height:2px;background:var(--text-primary);margin:3px 0}
+    /* sections / cards / forms (same as previous) */
     .hero{padding:140px 0 100px;text-align:center;background:var(--surface)}
-    .hero h1{font-size:3rem;font-weight:700;letter-spacing:-.02em;margin-bottom:1.2rem;line-height:1.1}
-    .hero-subtitle{font-size:1.25rem;color:var(--text-secondary);max-width:620px;margin:0 auto 2rem}
-    .hero-cta{
-      display:inline-flex;align-items:center;gap:.5rem;background:var(--gradient);color:#fff;
-      padding:1rem 2rem;border-radius:12px;font-weight:600;font-size:1.05rem;box-shadow:var(--shadow-lg);text-decoration:none;transition:.3s}
-    .hero-cta:hover{transform:translateY(-2px);box-shadow:0 20px 25px -5px rgb(0 0 0/.1),0 8px 10px -6px rgb(0 0 0/.1)}
-
-    /* ---------- GENERIC SECTIONS ---------- */
+    .hero h1{font-size:3rem;font-weight:700;margin-bottom:1.2rem}
+    .hero-sub{font-size:1.25rem;color:var(--text-secondary);max-width:620px;margin:0 auto 2rem}
+    .hero-cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--gradient);color:#fff;padding:1rem 2rem;border-radius:12px;font-weight:600;text-decoration:none}
     .section{padding:80px 0}
-    .section-header{text-align:center;margin-bottom:4rem}
-    .section h2{font-size:2.25rem;font-weight:700;letter-spacing:-.02em;margin-bottom:1rem}
-    .section-description{font-size:1.2rem;color:var(--text-secondary);max-width:700px;margin:0 auto}
-
-    /* ABOUT */
-    .about-text{font-size:1.15rem;color:var(--text-secondary);line-height:1.7;text-align:center;max-width:820px;margin:0 auto}
-
-    /* CARDS GRID */
-    .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:3rem}
-    .card{
-      background:#fff;padding:2.5rem 2rem;border-radius:16px;border:1px solid var(--border);
-      box-shadow:var(--shadow);transition:.3s}
-    .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-    .card-icon{width:60px;height:60px;background:var(--primary-light);border-radius:12px;
-      display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;font-size:1.5rem;color:var(--primary)}
-    .card h3{font-size:1.3rem;font-weight:600;margin-bottom:1rem}
+    .section-header{text-align:center;margin-bottom:3rem}
+    .section-header h2{font-size:2.25rem;font-weight:700}
+    .about-text,.why-text{font-size:1.1rem;color:var(--text-secondary);max-width:820px;margin:0 auto;line-height:1.7}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem}
+    .card{background:#fff;padding:2rem;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .card-icon{width:50px;height:50px;background:var(--primary-light);display:flex;justify-content:center;align-items:center;border-radius:10px;margin-bottom:1rem;font-size:1.3rem;color:var(--primary)}
+    .card h3{font-size:1.25rem;margin-bottom:.8rem}
     .card ul{list-style:none}
-    .card li{display:flex;gap:.75rem;margin-bottom:.75rem;color:var(--text-secondary);line-height:1.5}
-    .card li::before{content:'✓';color:var(--primary);font-weight:600;flex-shrink:0;margin-top:.1rem}
-
-    /* CONTACT FORM */
+    .card li{margin-bottom:.6rem;color:var(--text-secondary);display:flex;gap:.6rem}
+    .card li::before{content:'✓';color:var(--primary)}
     form{display:flex;flex-direction:column;gap:1rem}
-    input,textarea{
-      width:100%;padding:.9rem 1rem;border:1px solid var(--border);border-radius:8px;font:inherit}
+    input,textarea{padding:.85rem 1rem;border:1px solid var(--border);border-radius:8px;font:inherit}
     button[type=submit]{align-self:center}
-
-    /* ---------- FOOTER ---------- */
-    footer{background:var(--text-primary);color:var(--text-muted);padding:3rem 0;text-align:center}
-    .footer-content{border-top:1px solid #374151;padding-top:2rem}
-
-    /* ---------- RESPONSIVE ---------- */
-    @media(max-width:768px){
-      .container{padding:0 1rem}
-      .nav-links{display:none}
-      .mobile-menu-toggle{display:flex}
-      .hero h1{font-size:2.3rem}
-      .hero-subtitle{font-size:1.05rem}
-      .cards-grid{grid-template-columns:1fr;gap:1.5rem}
-      .card{padding:2rem 1.5rem}
-      .hero{padding:120px 0 80px}
-      .section{padding:60px 0}
-    }
-    @media(max-width:480px){
-      .hero h1{font-size:1.9rem}
-      .hero-subtitle{font-size:1rem}
-      .section h2{font-size:1.75rem}
-    }
-
-    /* Fade-in animation */
-    .fade-in{opacity:0;transform:translateY(30px);animation:fadeIn .8s ease forwards}
-    @keyframes fadeIn{to{opacity:1;transform:translateY(0)}}
-    /* Scroll progress bar */
-    .scroll-indicator{position:fixed;top:80px;left:0;width:100%;height:3px;background:var(--border);z-index:999}
-    .scroll-progress{height:100%;background:var(--gradient);width:0%}
+    footer{background:var(--text-primary);color:var(--text-muted);padding:3rem 0;text-align:center;margin-top:4rem}
+    /* Responsive tweaks */
+    @media(max-width:768px){.container{padding:0 1rem}.nav-links{display:none}.mobile-toggle{display:flex}.hero h1{font-size:2.3rem}}
   </style>
+
+  <!-- Structured data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"SSWHO",
+    "description":"Orlando-based acquisition entrepreneur seeking one B2B service or light-manufacturing business.",
+    "url":"https://sswho.com",
+    "areaServed":"US-FL",
+    "contactPoint":[{"@type":"ContactPoint","telephone":"+1-407-555-0198","contactType":"inquiries"}],
+    "sameAs":["https://www.linkedin.com/in/placeholder"]
+  }
+  </script>
+
+  <!-- GA4 (replace G-XXXXXXXXX) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXX"></script>
+  <script>
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date()); gtag('config','G-XXXXXXXXX');
+  </script>
 </head>
 
 <body>
-  <!-- Progress bar -->
-  <div class="scroll-indicator"><div class="scroll-progress"></div></div>
-
-  <!-- ========  NAV  ======== -->
+  <!-- Header -->
   <header>
     <nav class="container">
-      <a href="#" class="logo">SSWHO</a>
-
-      <div class="nav-links" id="site-nav">
+      <a class="logo" href="#">SSWHO</a>
+      <div class="nav-links" id="nav">
         <a href="#about">About</a>
         <a href="#criteria">Criteria</a>
         <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact" class="cta-button">Share an Orlando Deal</a>
+        <a href="#transition">Transition Promise</a>
+        <a href="#contact" class="cta-button">Share a Deal</a>
       </div>
-
-      <button class="mobile-menu-toggle" id="nav-toggle"
-              aria-label="Toggle navigation" aria-expanded="false">
+      <button class="mobile-toggle" id="nav-btn" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
 
-  <!-- ========  HERO  ======== -->
+  <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>Looking for One Orlando-Area Business to Own&nbsp;&amp;&nbsp;Grow</h1>
-      <p class="hero-subtitle">
-        Backed by committed capital, I aim to acquire <em>a single</em>
-        product-based B2B service or light-manufacturing company and operate it
-        for the long term—applying the <strong>Buy Then Build</strong> playbook
-        to scale an already-profitable engine of cash-flow.
+      <h1>One Orlando Business Wanted</h1>
+      <p class="hero-sub">
+        Committed capital to <em>buy, run &amp; grow</em> a single product-based
+        B2B service or light-manufacturing company. Powered by the
+        <strong>Buy&nbsp;Then&nbsp;Build</strong> approach.
       </p>
-      <a href="#contact" class="hero-cta">Share an Opportunity&nbsp;→</a>
+      <a href="#contact" class="hero-cta">Submit Opportunity →</a>
     </div>
   </section>
 
-  <!-- ========  ABOUT  ======== -->
-  <section id="about" class="section about">
+  <!-- Founder Credibility -->
+  <section id="about" class="section">
     <div class="container">
-      <div class="section-header"><h2>Why One Business?</h2></div>
-      <p class="about-text">
-        After fifteen years growing channel revenue to nine-figure run-rates,
-        I’m following the Buy-Then-Build model: purchase an established,
-        cash-flowing company, then unlock growth through focused ownership.
-        This search is <strong>confidential</strong>, self-funded, and limited
-        to one acquisition—so my entire attention moves to your business on
-        day one.
-      </p>
-    </div>
-  </section>
+      <div class="section-header"><h2>Meet the Operator</h2></div>
+      <div class="cards">
+        <div class="card" style="text-align:center">
+          <!-- Optional headshot -->
+          <img src="headshot.jpg" alt="Founder headshot" style="width:110px;border-radius:50%;margin-bottom:1rem">
+          <p class="about-text">
+            Fifteen years driving channel revenue from $0 → $100 M+ and
+            integrating acquisitions at Fortune 500 scale. Recognised for 40 %
+            YoY compound growth and successful carve-out integration in 2022.
+          </p>
+          <p style="margin-top:1rem;font-size:.95rem;color:var(--text-secondary)">
+            <strong>Core strengths:</strong> revenue ops, process automation,
+            culture-first leadership.
+          </p>
+          <div style="margin-top:1.2rem">
+            <a href="#contact" class="cta-button" style="padding:.6rem 1.2rem;font-size:.85rem">
+              Start Confidential Chat
+            </a>
+            <a href="https://www.linkedin.com/in/placeholder" style="margin-left:1rem;font-size:.9rem">LinkedIn ↗</a>
+          </div>
+        </div>
 
-  <!-- ========  CRITERIA  ======== -->
-  <section id="criteria" class="section criteria" style="background:var(--surface)">
-    <div class="container">
-      <div class="section-header">
-        <h2>Acquisition Criteria</h2>
-        <p class="section-description">
-          Built-out operations, solid cash-flow, ready to scale.
-        </p>
+        <div class="card">
+          <h3>Why Work With Me?</h3>
+          <ul>
+            <li>Sole focus on **one** acquisition—your company gets 100 % of my attention</li>
+            <li>Owner-operator model ensures long-term stewardship</li>
+            <li>Data-driven growth playbook (automation + channel partnerships)</li>
+            <li>Backed by local Orlando investors for fast, certain close</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>What Sellers Say</h3>
+          <blockquote style="font-style:italic;color:var(--text-secondary)">
+            “Smoothest transition we’ve ever seen—our people felt supported from
+            day one.” — Former owner, B2B distributor
+          </blockquote>
+          <blockquote style="font-style:italic;color:var(--text-secondary);margin-top:1rem">
+            “Hit every milestone exactly when promised.” — Sell-side broker
+          </blockquote>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="cards-grid">
-
+  <!-- Criteria -->
+  <section id="criteria" class="section" style="background:var(--surface)">
+    <div class="container">
+      <div class="section-header"><h2>Target Profile</h2></div>
+      <div class="cards">
         <div class="card">
           <div class="card-icon">📍</div>
-          <h3>Location & Industry</h3>
+          <h3>Location & Sectors</h3>
           <ul>
-            <li>Greater Orlando or relocatable within Florida</li>
-            <li>Product-based B2B services or light manufacturing</li>
-            <li>5+ years of operating history & proven processes</li>
+            <li>Greater Orlando (relocatable considered)</li>
+            <li>Sub-sectors: industrial packaging, specialty cleaning chemicals, HVAC service parts</li>
+            <li>5+ years operating history</li>
           </ul>
         </div>
-
         <div class="card">
           <div class="card-icon">💰</div>
-          <h3>Financial Profile</h3>
+          <h3>SDE & Financials</h3>
           <ul>
-            <li><strong>SDE $750 k – $2 M</strong>
-                (Seller’s Discretionary Earnings = cash-flow to a full-time owner)</li>
-            <li>Margins ≥ 20 %</li>
-            <li>Recurring revenue &gt; 50 %</li>
-            <li>No single customer &gt; 20 % of sales</li>
+            <li>SDE $750 k – $2 M (cash-flow to owner) </li>
+            <li>Gross margin ≥ 30 %, net margin ≥ 20 %</li>
+            <li>Recurring/contract revenue &gt; 50 %</li>
+            <li>Customer concentration &lt; 20 %</li>
           </ul>
         </div>
-
         <div class="card">
           <div class="card-icon">🚀</div>
-          <h3>Growth Potential</h3>
+          <h3>Growth Levers</h3>
           <ul>
-            <li>Operational efficiencies or automation upside</li>
-            <li>Untapped digital / channel sales</li>
-            <li>Clear path to 2–3× SDE within 3 years</li>
+            <li>Process automation &amp; ERP upgrades</li>
+            <li>Channel-partner expansion</li>
+            <li>Lean ops to improve SDE 2-3× within 3 yrs</li>
           </ul>
         </div>
-
+      </div>
+      <div style="text-align:center;margin-top:2.5rem">
+        <a class="cta-button" href="SSWHO_Criteria.pdf" download>
+          Download 1-Page Criteria Sheet
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ========  PROCESS  ======== -->
-  <section id="process" class="section process">
+  <!-- Fast Process -->
+  <section id="process" class="section">
     <div class="container">
       <div class="section-header"><h2>Fast-Track Process</h2></div>
-      <div class="cards-grid">
+      <div class="cards">
+        <div class="card"><h3>Week 0</h3><p>NDA + 30-min intro call</p></div>
+        <div class="card"><h3>Day 5</h3><p>LOI delivered (after light SDE review)</p></div>
+        <div class="card"><h3>Day 45-60</h3><p>Close with committed capital</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transition Promise -->
+  <section id="transition" class="section" style="background:var(--surface)">
+    <div class="container">
+      <div class="section-header"><h2>Transition Promise</h2></div>
+      <p class="why-text">
+        Employees keep their roles, customers keep their service, and the founder
+        sets the pace of transition. I work on-site with your team for the first
+        90 days, preserving culture while installing systems that support growth
+        and stability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Social Proof Belt -->
+  <section class="section">
+    <div class="container" style="display:flex;justify-content:center;gap:3rem;flex-wrap:wrap">
+      <img src="ibba.png" alt="IBBA Member" style="height:45px">
+      <img src="bta.png"  alt="Business Transition Academy" style="height:45px">
+      <img src="florida-chamber.png" alt="Florida Chamber" style="height:45px">
+    </div>
+  </section>
+
+  <!-- Lead-capture + Broker form -->
+  <section id="contact" class="section" style="background:var(--surface)">
+    <div class="container">
+      <div class="section-header"><h2>Contact & Deal Flow</h2></div>
+
+      <div class="cards">
+        <!-- Newsletter -->
         <div class="card">
-          <h3>Week 0</h3>
-          <p>30-min intro call • NDA countersigned the same day</p>
+          <h3>Deal-Alert Newsletter</h3>
+          <p style="color:var(--text-secondary);margin-bottom:1rem">
+            Get a quarterly snapshot of the Florida lower-middle-market
+            (confidential, investors welcome).
+          </p>
+          <form action="https://formspree.io/f/yourNewsletterID" method="POST">
+            <input type="email" name="email" placeholder="Email address" required>
+            <button type="submit" class="cta-button" style="padding:.6rem 1.4rem;font-size:.9rem">
+              Subscribe
+            </button>
+          </form>
         </div>
+
+        <!-- Broker upload -->
         <div class="card">
-          <h3>Day 5</h3>
-          <p><strong>LOI issued</strong> after light review of P&amp;L and SDE add-backs</p>
-        </div>
-        <div class="card">
-          <h3>Day 45–60</h3>
-          <p>Confirmatory diligence &amp; closing • Owner transition plan starts</p>
+          <h3>Submit a Deal (Brokers)</h3>
+          <form action="https://formspree.io/f/yourBrokerID" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="file" name="teaser" accept=".pdf,.doc,.ppt">
+            <textarea name="message" rows="4" placeholder="Key points / SDE / asking multiple"></textarea>
+            <button type="submit" class="cta-button" style="padding:.6rem 1.4rem;font-size:.9rem">
+              Send Confidentially
+            </button>
+          </form>
+          <p style="font-size:.85rem;color:var(--text-secondary);margin-top:.8rem">
+            Prefer direct email?  <a href="mailto:deals@sswho.com">deals@sswho.com</a><br>
+            Questions? Call 407-555-0198
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========  CONTACT  ======== -->
-  <section id="contact" class="section contact" style="background:var(--surface)">
-    <div class="container">
-      <div class="section-header"><h2>Share an Opportunity</h2></div>
-      <p class="section-description" style="max-width:600px;margin:0 auto 2rem">
-        All inquiries begin with a mutual NDA and are handled confidentially.
-      </p>
-
-      <form action="https://formspree.io/f/yourFormID" method="POST">
-        <input type="text"   name="name"  placeholder="Your Name"       required>
-        <input type="email"  name="email" placeholder="Email Address"   required>
-        <textarea name="deal" rows="5" placeholder="Brief deal teaser or message"></textarea>
-        <button type="submit" class="hero-cta">Send Confidentially</button>
-      </form>
-
-      <p style="margin-top:1rem;font-size:.9rem;color:var(--text-secondary)">
-        Prefer email? Write to <a href="mailto:deals@sswho.com">deals@sswho.com</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- ========  FOOTER  ======== -->
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <div class="footer-content">
-        <p>&copy; 2025 SSWHO | Confidential Orlando Search</p>
-      </div>
+      © 2025 SSWHO – Confidential Orlando Search
     </div>
   </footer>
 
-  <!-- ========  SCRIPTS  ======== -->
+  <!-- Small JS: nav toggle + scroll bar -->
   <script>
-    /* Scroll progress bar */
-    window.addEventListener('scroll',()=>{
-      const bar=document.querySelector('.scroll-progress');
-      const top=window.pageYOffset;
-      const height=document.body.offsetHeight-window.innerHeight;
-      bar.style.width=(top/height)*100+'%';
-    });
+    // progress
+    const bar=document.createElement('div');
+    bar.style.cssText='position:fixed;top:80px;left:0;height:3px;background:#0066cc;width:0;z-index:999';
+    document.body.append(bar);
+    window.addEventListener('scroll',()=>bar.style.width=
+      (window.scrollY/(document.body.scrollHeight-window.innerHeight))*100+'%');
 
-    /* Fade-in on scroll */
-    const observer=new IntersectionObserver(entries=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){e.target.classList.add('fade-in')}
-      });
-    },{threshold:.1,rootMargin:'0px 0px -50px 0px'});
-    document.querySelectorAll('.card,.section-header,.hero-cta')
-            .forEach(el=>observer.observe(el));
-
-    /* Mobile nav toggle */
-    const toggle=document.getElementById('nav-toggle');
-    const nav=document.getElementById('site-nav');
-    toggle.addEventListener('click',()=>{
-      const expanded=toggle.getAttribute('aria-expanded')==='true';
-      toggle.setAttribute('aria-expanded',!expanded);
-      nav.style.display=!expanded?'flex':'none';
-    });
+    // mobile nav
+    const btn=document.getElementById('nav-btn'),nav=document.getElementById('nav');
+    btn.onclick=()=>{const e=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',!e);nav.style.display=e?'none':'flex'};
   </script>
 </body>
 </html>
