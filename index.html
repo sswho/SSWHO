@@ -1,45 +1,127 @@
+<!-- index.html -->
 <!DOCTYPE html>
-
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SSWHO - Business Acquisitions</title>
-  <link rel="stylesheet" href="globals.css" />
+  <title>SSWHO | Business Acquisitions</title>
+  <link rel="stylesheet" href="globals.css"/>
 </head>
 <body>
-  <div class="container">
-    <header>
+  <header class="container">
+    <nav>
+      <div class="logo">SSWHO</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#criteria">Criteria</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
       <h1>SSWHO</h1>
-      <p class="tagline">Acquiring Businesses. Building Legacies.</p>
-    </header>
+      <p>
+        Acquiring and growing established B2B businesses<br/>
+        Built on proven buy-and-build principles
+      </p>
+      <a class="btn" href="mailto:sanjay@sswho.com">Get in Touch</a>
+    </section>
 
-    <main>
-      <section class="intro">
-        <p>
-          Welcome to <strong>SSWHO</strong>, where I seek out, evaluate, and acquire
-          promising businesses to take them to their next growth phase. With deep
-          expertise in business partnerships and a track record of driving value,
-          I’m committed to excellence in every transaction.
-        </p>
-      </section>
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <p>
+        Operator with over a decade of experience scaling B2B revenue through 
+        channel partnerships and operational excellence. Focused on hands-on 
+        leadership to drive sustainable growth.
+      </p>
+    </section>
 
-      <section class="contact">
-        <button id="contact-btn">Contact Me</button>
-        <p>Email: <a href="mailto:sanjay@sswho.com">sanjay@sswho.com</a></p>
-      </section>
-    </main>
+    <section id="criteria" class="section container">
+      <h2>Acquisition Criteria</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Location &amp; Industry</h3>
+          <ul>
+            <li>Orlando area, remote-friendly, or relocatable</li>
+            <li>Product or B2B service businesses</li>
+            <li>Established operations (3+ years)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Financial Profile</h3>
+          <ul>
+            <li>~$1M SDE target</li>
+            <li>≥20% EBITDA margins</li>
+            <li>≥75% recurring revenue</li>
+            <li>&lt;20% customer concentration</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Growth Potential</h3>
+          <ul>
+            <li>Operational efficiencies to capture</li>
+            <li>Automation &amp; channel expansion opportunities</li>
+            <li>Underutilized sales channels</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <footer>
+    <section id="partners" class="section container">
+      <h2>Partner With SSWHO</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Business Brokers</h3>
+          <ul>
+            <li>Defined criteria—no guesswork</li>
+            <li>Discreet process</li>
+            <li>Rapid decision-making</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Business Owners</h3>
+          <ul>
+            <li>Hands-on operator taking the reins</li>
+            <li>Legacy-focused transitions</li>
+            <li>Employees &amp; stakeholders prioritized</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Passive Investors</h3>
+          <ul>
+            <li>Continuous capital raise</li>
+            <li>Aligned to maximize IRR</li>
+            <li>Transparent reporting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <p>Ready to evaluate opportunities. Let’s start a conversation.</p>
+      <a class="btn" href="mailto:sanjay@sswho.com">Email Me</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
       <p>&copy; 2025 SSWHO. All rights reserved.</p>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   <script type="module">
-    // TypeScript-style module script (requires build/transpile step)
-    const contactButton = document.getElementById('contact-btn') as HTMLButtonElement;
-    contactButton.addEventListener('click', (): void => {
-      window.location.href = 'mailto:sanjay@sswho.com';
+    // smooth scrolling with TypeScript annotations
+    const links = document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]');
+    links.forEach(link => {
+      link.addEventListener('click', (e: MouseEvent) => {
+        e.preventDefault();
+        const target = document.querySelector<HTMLElement>(link.getAttribute('href')!);
+        target?.scrollIntoView({ behavior: 'smooth' });
+      });
     });
   </script>
 </body>
